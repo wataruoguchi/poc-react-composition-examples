@@ -2,7 +2,7 @@ import { createRoot } from "react-dom/client";
 import { Auth0Provider } from "@auth0/auth0-react";
 import { setupWorker } from "msw/browser";
 import { handlers } from "./mocks/handlers";
-import { ExampleWithDependencyInjection } from "./examples/dependency-injection/Example";
+import { ExampleWithComposition } from "./examples/composition/Example";
 import { ExampleWithContext } from "./examples/using-context/Example";
 import { ExampleWithPropDrilling } from "./examples/prop-drilling/Example";
 import App from "./App";
@@ -26,9 +26,9 @@ worker.start().then(() => {
       cacheLocation="localstorage" // Note: This is not the safest option.
     >
       <App />
-      <ExampleWithPropDrilling color="red" />
+      <ExampleWithComposition color="green" />
       <ExampleWithContext color="yellow" />
-      <ExampleWithDependencyInjection color="green" />
+      <ExampleWithPropDrilling color="red" />
     </Auth0Provider>,
   );
 });

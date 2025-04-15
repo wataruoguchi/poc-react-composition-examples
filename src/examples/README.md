@@ -2,7 +2,7 @@
 
 This repository demonstrates different ways to compose React components, from simplest to most complex. The goal is to help developers choose the most appropriate pattern for their use case.
 
-## 1. Prop Drilling
+## 1. Prop Drilling (Anti-pattern)
 
 ```tsx
 // Simple and straightforward
@@ -29,7 +29,7 @@ This repository demonstrates different ways to compose React components, from si
 - Can become verbose with deep component trees
 - Requires passing props through intermediate components
 
-## 2. Component Composition (Dependency Injection)
+## 2. Component Composition
 
 ```tsx
 // More flexible, components are passed as props
